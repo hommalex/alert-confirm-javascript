@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BBOTX</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script src="bbox.js"></script>
+	<style>
+	* { font-family: 'Roboto Condensed', sans-serif; }
+	html, body {  height: 100%; }
+	body { background-color: #D9E8F5; }
+	.flexi { width: 400px; #D9E8F5; display: flex; flex-direction: row; align-items: flex-end; justify-content: space-between;  height: 50%; margin: 0 auto; }
+	button.bt { background-color: #304269; color: #fff; font-size: 22px; padding: 15px 35px; border-radius: 6px; cursor: pointer; border: none; margin: 20px 0; width: 180px; }
+	.result { width: 100%; background-color: #fff; padding: 20px 0; text-align: center; color: #202C46; border-radius: 6px; }
+	</style>
+</head>
+<body>
+<div class="flexi">
+	<button class="bt" onClick="bbox.alert('Hello!! This an Alert Message')"> ALERT </button>
+	<button class="bt" onClick="bbox.confirm('Are you from Mars?', function(data) { if (data) { document. getElementById('result').innerHTML = 'You clicked YES'; } else { document. getElementById('result').innerHTML = 'You clicked NO'; }})"> CONFIRM </button>
+</div>
+<div class="flexi" style="height: auto">
+	<div id="result" class="result"> NULL </div>
+</div>
+</body>
+</html>
